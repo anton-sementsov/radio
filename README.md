@@ -69,11 +69,11 @@ Everything from a feature should be exported from the `index.ts` file which beha
 
 You should import stuff from other features only by using:
 
-`import { AwesomeComponent } from '@iamai/features/awesome-feature'`
+`import { AwesomeComponent } from '@radio/features/awesome-feature'`
 
 and not
 
-`import { AwesomeComponent } from '@iamai/features/awesome-feature/components/AwesomeComponent'`
+`import { AwesomeComponent } from '@radio/features/awesome-feature/components/AwesomeComponent'`
 
 This was inspired by how [NX](https://nx.dev/) handles libraries that are isolated but available to be used by the other modules. Think of a feature as a library or a module that is self-contained but can expose different parts to other features via its entry point.
 
@@ -86,8 +86,8 @@ This was inspired by how [NX](https://nx.dev/) handles libraries that are isolat
 $ git checkout main
 # get latest changes:
 $ git pull
-# create a new branch (lets assume you are working on a ticket named IP-1, that itself is a story):
-$ git checkout -b feat/IP-1
+# create a new branch (lets assume you are working on a ticket named RA-1, that itself is a story):
+$ git checkout -b feat/RA-1
 ```
 
 2. Make the changes required in order to meet the assigned task requirements.

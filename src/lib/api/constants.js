@@ -1,0 +1,2 @@
+export const AIRTABLE_API_KEY = process.env.NEXT_PUBLIC_AIRTABLE_API_KEY
+export const AIRTABLE_BASE_KEY = process.env.NEXT_PUBLIC_AIRTABLE_BASE_KEY

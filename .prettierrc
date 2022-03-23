@@ -6,7 +6,7 @@
     "useTabs": false,
     "importOrder": [
       "<THIRD_PARTY_MODULES>",
-      "^@iamai/(.*)$",
+      "^@radio/(.*)$",
       "^[./]"
     ],
     "importOrderSeparation": true,

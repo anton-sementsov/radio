@@ -1,7 +1,10 @@
+
+import { Timeline } from '../features/home/components/Timeline'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,6 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div>
+          <Timeline />
         </div>
       </main>
 
