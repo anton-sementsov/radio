@@ -1,13 +1,12 @@
 import { airtableDB } from '../../../../lib/api';
 import React, { useEffect, useState } from 'react';
 import { MixList } from '../MixList';
+import { ArtistDesription } from '../ArtistDesription';
 
 export const Timeline = () => {
 
   const [mixes, setMixes] = useState([]);
-
-  
-  console.log('mixes', mixes);
+  const [onHoverItem, setOnHoverItem] = useState(null);
 
   useEffect(() => {
     airtableDB("mixes")
@@ -29,9 +28,11 @@ export const Timeline = () => {
       });
   }, []);
 
+
   return (
-    <div>
-      <MixList items={mixes} />
-    </div>
+    <>
+      <MixList items={mixes} setOnHoverItem={setOnHoverItem} />
+      <ArtistDesription mix={onHoverItem}/>
+    </>
   )
 }

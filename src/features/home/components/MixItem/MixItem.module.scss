@@ -1,5 +1,15 @@
 .mixItem {
-    padding: 10px;
     font-size: 24px;
+    color: white;
     cursor: pointer;
 };
+
+.time {
+    display: inline-block;
+    min-width: 70px;
+    padding-right: 4px;
+}
+
+.artist {
+    padding-left: 10px;
+}

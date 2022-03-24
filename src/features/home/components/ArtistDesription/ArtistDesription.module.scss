@@ -1,0 +1,26 @@
+.artistDesription {
+    position: absolute;
+    top: 55%;
+    right: 9%;
+    z-index: 2;
+    max-width: 320px;
+    max-height: 320px;
+
+   div {
+       position: relative;
+   }
+
+   span {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       padding: 10px;
+       color: rgb(12, 128, 196);
+       font-weight: 500;
+   }
+}
+
+.image {
+    width: 320px;
+    height: 320px;
+}

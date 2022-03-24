@@ -1,0 +1,12 @@
+.progress {
+    width: 300px;
+    position: relative;
+    span {
+        position: absolute;
+        left: 10px;
+        top:2px;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}

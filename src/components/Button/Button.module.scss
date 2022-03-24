@@ -1,0 +1,18 @@
+.button {
+    height: 55px;
+    min-width: 180px;
+    background-color: gray;
+    border-radius: 60px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ffda23;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffda23;
+
+    &:hover {
+        background: linear-gradient(180deg,  #1e6ace  50%, #ffda23 50%);
+        border: none;
+        color: white;
+    }
+}
