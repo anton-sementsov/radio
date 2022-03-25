@@ -38,7 +38,7 @@ export default function Home() {
             <ProgressBar />
           </div>
           <div style={{ marginTop: '20px' }}>
-            <Button label='DONATE' onClick={() => { window.open('https://www.20ftradio.net/grains-of-peace', '_blank').focus(); }} />
+            <Button label='DONATE' onClick={() => { window.open('https://www.paypal.com/donate/?hosted_button_id=FARF8CJJPJMQS', '_blank').focus(); }} />
           </div>
           <p style={{ marginTop: '15px' }}>
             WANT TO PARTICIPATE? SEND YOUR
