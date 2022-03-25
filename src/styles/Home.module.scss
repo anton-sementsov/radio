@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: white;
+    color: rgb(236, 233, 233);
     padding: 10px 40px;
     
     p {
@@ -42,4 +42,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 50px 0 0 20px;
+}
+
+.stripe {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5px;
 }
