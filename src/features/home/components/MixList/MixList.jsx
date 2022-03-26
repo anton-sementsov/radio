@@ -15,11 +15,12 @@ export const MixList = ({ items, setOnHoverItem }) => {
 
     return (
         <>
-            {items.map((item) => {
+            {items.map((item, index) => {
                 return (
                     <>
                         {renderDayItem(item.date)}
                         <MixItem
+                            index={index}
                             key={item.key}
                             item={item}
                             setOnHoverItem={setOnHoverItem} />

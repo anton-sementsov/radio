@@ -2,6 +2,10 @@
     font-size: 24px;
     color: white;
     cursor: pointer;
+    font-family: 'ScaniaSans';
+    &Active {
+        font-family: 'ScaniaSansBold';
+    }
 };
 
 .time {
