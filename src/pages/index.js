@@ -34,7 +34,7 @@ export default function Home() {
             <p >
               {'Listen to music and stand with Ukraine.🇺🇦'.toUpperCase()} <br />
             </p>
-            <p style={{ paddingTop: '20px', maxWidth: '620px', fontWeight: '600', color: '#ffffff' }}>
+            <p style={{ paddingTop: '20px', maxWidth: '620px', fontFamily : 'ScaniaSansBold', color: '#ffffff' }}>
               {'Our goal is $100 000 for humanitarian needs: this funds will be transfered to NBU Fundraising Account for Humanitarian Assistance, Destroyed Property and Infrastructure Restoration Fund and friends-volunteers who are fighting back the occupier in different Ukrainian cities.'.toUpperCase()} <br />
             </p>
             <div style={{ marginTop: '35px' }}>
@@ -46,7 +46,7 @@ export default function Home() {
             <p style={{ marginTop: '15px' }}>
               WANT TO PARTICIPATE? SEND YOUR
               <br />
-              PAECEFULL MiX TO  <a style={{ color: '#ffda23' }} href="mailto:20FTRADIO@GMAIL.COM">20FTRADIO@GMAIL.COM</a>
+              PAECEFULL MiX TO  <a style={{ color: '#F6C20B' }} href="mailto:20FTRADIO@GMAIL.COM">20FTRADIO@GMAIL.COM</a>
             </p>
           </div>
           <div className={styles.timeline}>
