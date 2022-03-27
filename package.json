@@ -32,7 +32,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "postcss": "^8.4.5",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "react-share": "^4.4.0"
   },
   "config": {
     "commitizen": {
