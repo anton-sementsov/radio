@@ -1,7 +1,8 @@
 import React from 'react';
 import { DayItem } from '../DayItem';
+import styles from './Mix.module.scss';
 import MixItem from '../MixItem/MixItem';
-import styles from './MixList.module.scss';
+
 
 export const MixList = ({ items, setDescription, description }) => {
     const day = null;
