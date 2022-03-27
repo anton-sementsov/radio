@@ -1,8 +1,13 @@
+@import '../../../../styles/breakpoints';
 .marquee {
     width:100%;
     white-space:nowrap;
     overflow:hidden;
     margin-bottom: 15px;
+    display: none;
+    @include md {
+        display: block;
+    }
 
     span {
         justify-content: space-around;

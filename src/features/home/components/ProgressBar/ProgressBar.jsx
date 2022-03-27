@@ -26,11 +26,11 @@ export const ProgressBar = ({ }) => {
       <span>{donates?.collected}</span>
       <Line
         percent={(donates.collected * 100 / donates.total)}
-        strokeWidth={5}
-        trailWidth={6}
+        strokeWidth={3}
+        trailWidth={3}
         strokeColor="#F6C20B"
         trailColor="transparent"
-        style={{ border: '1px solid #F6C20B', borderRadius: '10px' }}
+        style={{ border: '1px solid #F6C20B', borderRadius: '20px' }}
       />
     </div>
   );

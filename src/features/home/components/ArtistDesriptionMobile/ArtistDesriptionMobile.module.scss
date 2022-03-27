@@ -4,16 +4,17 @@
     font-family: 'ScaniaSansBold';
     font-size: 16px;
     position: absolute;
-    top: 45%;
-    right: 5%;
+    top: -320px;
+    left: 3;
     z-index: 2;
     max-width: 320px;
     max-height: 320px;
 
-    display: none;
+    display: block;
     @include md {
-        display: block;
+        display: none;
     } 
+    
     
    div {
        position: relative;

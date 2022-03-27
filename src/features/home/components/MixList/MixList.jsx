@@ -1,9 +1,9 @@
 import React from 'react';
 import { DayItem } from '../DayItem';
 import MixItem from '../MixItem/MixItem';
+import styles from './MixList.module.scss';
 
-export const MixList = ({ items, setOnHoverItem }) => {
-
+export const MixList = ({ items, setDescription, description }) => {
     const day = null;
 
     const renderDayItem = (date) => {
@@ -12,21 +12,22 @@ export const MixList = ({ items, setOnHoverItem }) => {
             return <DayItem date={date} />
         }
     }
-
     return (
-        <>
-            {items.map((item, index) => {
-                return (
-                    <>
-                        {renderDayItem(item.date)}
-                        <MixItem
-                            index={index}
-                            key={item.key}
-                            item={item}
-                            setOnHoverItem={setOnHoverItem} />
-                    </>
-                );
-            })}
-        </>
+        <div className={styles.container}>
+            <div className={styles.containerInner}>
+                {items.map((item, index) => {
+                    return (
+                        <div key={index}>
+                            {renderDayItem(item.date)}
+                            <MixItem
+                                index={index}
+                                description={description}
+                                item={item}
+                                setDescription={setDescription} />
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
     );
 };

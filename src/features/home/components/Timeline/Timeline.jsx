@@ -6,7 +6,7 @@ import { ArtistDesription } from '../ArtistDesription';
 export const Timeline = () => {
 
   const [mixes, setMixes] = useState([]);
-  const [onHoverItem, setOnHoverItem] = useState(null);
+  const [description, setDescription] = useState(null);
 
   useEffect(() => {
     airtableDB("mixes")
@@ -22,7 +22,7 @@ export const Timeline = () => {
             const HOUR = 3600000;
             return item?.date.getTime() - HOUR > Date.now();
           })
-          .sort((a, b) => b.date - a.date)
+          .sort((a, b) => a.date - b.date)
         setMixes(result);
         fetchNextPage();
       });
@@ -31,8 +31,8 @@ export const Timeline = () => {
 
   return (
     <>
-      <MixList items={mixes} setOnHoverItem={setOnHoverItem} />
-      <ArtistDesription mix={onHoverItem}/>
+      <MixList items={mixes} description={description} setDescription={setDescription} />
+      <ArtistDesription mix={description} />
     </>
   )
 }
