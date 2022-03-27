@@ -29,8 +29,8 @@ export const CommentStripe = ({ }) => {
                  {/*eslint-disable-next-line react/jsx-key*/}
                 {messages.map((message) => <div className={styles.stripeContainer}>
                     <div className={styles.emoji}>{message?.emoji}</div>
-                    <div className={styles.text}>{message?.text.toUpperCase()}</div>
-                    <div className={styles.textInvis}>{message?.text.toUpperCase()}</div>
+                    <div className={styles.text}>{message?.text?.toUpperCase()}</div>
+                    <div className={styles.textInvis}>{message?.text?.toUpperCase()}</div>
                 </div>)}
             </span>
         </div>
