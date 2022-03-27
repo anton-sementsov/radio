@@ -46,7 +46,7 @@ export default function Home() {
             <p style={{ marginTop: '15px' }}>
               WANT TO PARTICIPATE? SEND YOUR
               <br />
-              PAECEFULL MiX TO  <a style={{ color: '#F6C20B' }} href="mailto:20FTRADIO@GMAIL.COM">20FTRADIO@GMAIL.COM</a>
+              PAECEFULL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20FTRADIO@GMAIL.COM">20FTRADIO@GMAIL.COM</a>
             </p>
           </div>
           <div className={styles.timeline}>

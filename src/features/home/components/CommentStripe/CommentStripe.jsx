@@ -21,6 +21,7 @@ export const CommentStripe = ({ }) => {
             });
     }, []);
 
+    if (!messages) return <></>;
 
     return (
         <div className={styles.marquee} >

@@ -8,19 +8,19 @@
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
-    background: linear-gradient(180deg,  #0848A5  50%, #F6C20B 50%);
+    background: linear-gradient(180deg,  #4B80E1  50%, #FECE4D 50%);
     border: none;
     color: white;
 
     @include md {
         background: none;
         background-color: transparent;
-        border: 1px solid #F6C20B;
-        color: #F6C20B;
+        border: 1px solid #FECE4D;
+        color: #FECE4D;
     }
 
     &:hover {
-        background: linear-gradient(180deg,  #0848A5  50%, #F6C20B 50%);
+        background: linear-gradient(180deg,  #4B80E1  50%, #FECE4D 50%);
         border: none;
         color: white;
     }
