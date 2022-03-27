@@ -14,7 +14,7 @@ export const ArtistDesriptionMobile = ({ mix, setOpen, setDescription }) => {
                 }}>
             <div>
                 <img className={styles.image} src={img} />
-                <span>{description.toUpperCase()}</span>
+                <span>{description?.toUpperCase()}</span>
             </div>
         </div>
     );

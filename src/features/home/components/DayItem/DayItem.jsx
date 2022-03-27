@@ -7,7 +7,7 @@ export const DayItem = ({ date }) => {
     const MONTHES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return (
         <div className={styles.dayItem}>
-            {`${DAYS[date.getDay()]}, ${MONTHES[date.getMonth()].toUpperCase()} ${date.getDate()}`}
+            {`${DAYS[date.getDay()]}, ${MONTHES[date.getMonth()]?.toUpperCase()} ${date.getDate()}`}
         </div>
     );
 };

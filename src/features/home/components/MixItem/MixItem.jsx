@@ -21,7 +21,7 @@ const MixItem = ({ item, description, setDescription, index }) => {
             }}
         >
             <span className={styles.time}>{(date.getHours() < 10 ? '0' : '') + date.getHours()}:{(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}</span>
-            -<span className={styles.artist}>{artist.toUpperCase()}</span>
+            -<span className={styles.artist}>{artist?.toUpperCase()}</span>
             {(item.id === description?.id) && <ArtistDesriptionMobile mix={description} setOpen={setOpen} setDescription={setDescription} />}
         </div>
     )

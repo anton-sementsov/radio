@@ -9,7 +9,7 @@ export const ArtistDesription = ({ mix, mobile = false }) => {
         <div style={{ display: mobile ? 'block !important' : ' ' }} className={styles.artistDesription} >
             <div>
                 <img className={styles.image} src={img} />
-                <span>{description.toUpperCase()}</span>
+                <span>{description?.toUpperCase()}</span>
             </div>
         </div>
     );
