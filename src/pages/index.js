@@ -96,7 +96,7 @@ export default function Home() {
             <p style={{ marginTop: '15px' }}>
               WANT TO PARTICIPATE? SEND YOUR
               <br />
-              PEACEFULL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
+              PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
             </p>
 
 
