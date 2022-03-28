@@ -6,7 +6,8 @@ import { Button } from '../components/Button'
 import logo from '../assets/images/logo.png'
 import { ProgressBar } from '../features/home/components/ProgressBar'
 import { CommentStripe } from '../features/home/components/CommentStripe'
-import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from "react-share";
+import { FacebookShareButton, TwitterShareButton, TwitterIcon } from "react-share";
+import { FacebookIcon } from '../components/icons';
 import styles from '../styles/Home.module.scss'
 import { SEO } from '../utils/seo';
 
@@ -43,7 +44,7 @@ export default function Home() {
               {'We invite artists from all over the world to sow Grains of Peace to support the spirit of our country, fill souls with light and fill the future with meaning'.toUpperCase()} <br />
             </p>
             <p >
-              {'Listen to music and stand with Ukraine.🇺🇦'.toUpperCase()} <br />
+              {'Listen to music and stand with Ukraine 🇺🇦'.toUpperCase()} <br />
             </p>
             <p style={{ paddingTop: '20px', maxWidth: '620px', fontFamily: 'ScaniaSansBold', color: '#ffffff' }}>
               {'Our goal is $100 000 for humanitarian needs: this funds will be transfered to NBU Fundraising Account for Humanitarian Assistance, Destroyed Property and Infrastructure Restoration Fund and friends-volunteers who are fighting back the occupier in different Ukrainian cities.'.toUpperCase()} <br />
@@ -63,7 +64,6 @@ export default function Home() {
                 <FacebookShareButton
                   url={seo.url}
                   quote={seo.title}
-                  hashtag={"#grains-of-peace"}
                   description={seo.description}
                   className="Demo__some-network__share-button"
                 >
