@@ -76,7 +76,6 @@ export default function Home() {
                 <TwitterShareButton
                   title={seo.title}
                   url={seo.url}
-                  hashtags={["#grains-of-peace"]}
                 >
                   <Image src={twitterIcon.src} alt='' width='20' height='20' />
 
