@@ -12,16 +12,17 @@
     border: none;
     color: white;
 
-    @include md {
-        background: none;
-        background-color: transparent;
-        border: 1px solid #FECE4D;
-        color: #FECE4D;
-    }
+    //@include md {
+    //    background: none;
+    //    background-color: transparent;
+    //    border: 1px solid #FECE4D;
+    //    color: #FECE4D;
+    //}
 
     &:hover {
         background: linear-gradient(180deg,  #4B80E1  50%, #FECE4D 50%);
         border: none;
         color: white;
+        transform: scale(1.05); 
     }
 }
