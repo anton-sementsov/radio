@@ -49,7 +49,15 @@ export default function Home() {
               {'Listen to music and stand with Ukraine 🇺🇦'.toUpperCase()} <br />
             </p>
             <p style={{ paddingTop: '20px', maxWidth: '620px', fontFamily: 'ScaniaSansBold', color: '#ffffff' }}>
-              {'Our goal is $100 000 for humanitarian needs: this funds will be transfered to NBU Fundraising Account for Humanitarian Assistance, Destroyed Property and Infrastructure Restoration Fund and friends-volunteers who are fighting back the occupier in different Ukrainian cities.'.toUpperCase()} <br />
+              {'Our goal is $100 000 for humanitarian needs: this funds will be transfered to '.toUpperCase()}
+              <a style={{ textDecoration: 'underline' }}
+                href='https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi'>
+                {'NBU Fundraising Account for Humanitarian Assistance'.toUpperCase()}</a>,
+              <a style={{ textDecoration: 'underline' }}
+                href='https://www.kmu.gov.ua/gromadskosti/fondi-vidnovlennya-ukrayini/destroyed-infrastructure-fund-vidnovlennya-infrastrukturi'
+              >
+                {' Destroyed Property and Infrastructure Restoration Fund'.toUpperCase()}</a>
+              {' and friends-volunteers who are fighting back the occupier in different Ukrainian cities.'.toUpperCase()} <br />
             </p>
             <div style={{ marginTop: '35px' }}>
               <ProgressBar />
@@ -109,6 +117,6 @@ export default function Home() {
           <CommentStripe />
         </div>
       </div>
-    </div>
+    </div >
   )
 }
