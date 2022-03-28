@@ -1,13 +1,15 @@
 
-import { Timeline } from '../features/home/components/Timeline'
-import Head from 'next/head'
+import { Timeline } from '../features/home/components/Timeline';
+import Head from 'next/head';
 import Image from 'next/image';
-import { Button } from '../components/Button'
-import logo from '../assets/images/logo.png'
-import { ProgressBar } from '../features/home/components/ProgressBar'
-import { CommentStripe } from '../features/home/components/CommentStripe'
+import { Button } from '../components/Button';
+import logo from '../assets/images/logo.png';
+import fbIcon from '../assets/images/facebook_blue.png';
+import twitterIcon from '../assets/images/twietter_blue.png';
+import shareIcon from '../assets/images/Share_blue.png';
+import { ProgressBar } from '../features/home/components/ProgressBar';
+import { CommentStripe } from '../features/home/components/CommentStripe';
 import { FacebookShareButton, TwitterShareButton, TwitterIcon } from "react-share";
-import { FacebookIcon } from '../components/icons';
 import styles from '../styles/Home.module.scss'
 import { SEO } from '../utils/seo';
 
@@ -60,24 +62,35 @@ export default function Home() {
             </p>
 
             <div style={{ paddingTop: '10px' }}>
-              <span style={{ paddingRight: '10px' }}>
-                <FacebookShareButton
-                  url={seo.url}
-                  quote={seo.title}
-                  description={seo.description}
-                  className="Demo__some-network__share-button"
-                >
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-              </span>
 
-              <TwitterShareButton
-                title={seo.title}
+              <FacebookShareButton
                 url={seo.url}
-                hashtags={["#grains-of-peace"]}
+                quote={seo.title}
+                description={seo.description}
+                className="Demo__some-network__share-button"
               >
-                <TwitterIcon size={32} round />
-              </TwitterShareButton>
+                <Image src={fbIcon.src} alt='' width='20' height='20' />
+              </FacebookShareButton>
+
+              <span style={{ padding: '0 7px' }}>
+                <TwitterShareButton
+                  title={seo.title}
+                  url={seo.url}
+                  hashtags={["#grains-of-peace"]}
+                >
+                  <Image src={twitterIcon.src} alt='' width='20' height='20' />
+
+                </TwitterShareButton>
+              </span>
+              <FacebookShareButton
+                url={seo.url}
+                quote={seo.title}
+                description={seo.description}
+                className="Demo__some-network__share-button"
+              >
+                <Image src={shareIcon.src} alt='' width='20' height='20' />
+
+              </FacebookShareButton>
             </div>
 
 
