@@ -20,7 +20,8 @@ export const Timeline = () => {
           }))
           .filter((item) => {
             const HOUR = 3600000;
-            return item?.date.getTime() + HOUR > Date.now();
+            const duration = 60000 * item?.duration || HOUR;
+            return item?.date.getTime() + duration > Date.now();
           })
           .sort((a, b) => a.date - b.date)
         setMixes(result);

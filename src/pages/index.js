@@ -117,6 +117,6 @@ export default function Home() {
           <CommentStripe />
         </div>
       </div>
-    </div >
+    </div>
   )
 }
