@@ -89,7 +89,7 @@ export default function Home() {
 
                 </TwitterShareButton>
               </span>
-              <FacebookShareButton
+              {/*<FacebookShareButton
                 url={seo.url}
                 quote={seo.title}
                 description={seo.description}
@@ -97,7 +97,7 @@ export default function Home() {
               >
                 <Image src={shareIcon.src} alt='' width='20' height='20' />
 
-              </FacebookShareButton>
+              </FacebookShareButton>*/}
             </div>
 
 
