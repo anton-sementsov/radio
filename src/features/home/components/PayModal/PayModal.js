@@ -27,7 +27,7 @@ export const PayModal = ({ setPayModal, payModal }) => {
             <p>Listen to music and stay with Ukraine 🇺🇦</p>
             <button className={styles.modalClose} onClick={() => setPayModal(false)}>X</button>
 
-            <div style={{ display: 'flex', justifyContent: 'space-around', paddingTop: '30px' }}>
+            <div className={styles.button} style={{}}>
                 <a
                     target='_blank'
                     href="https://send.monobank.com.ua/qCJaUtwX?fbclid=IwAR32Az5jdoBwjjNg3rxaDsUTdqipFKPfaCdQ6TtWQRMI0E4dm1yc5Wi2a7M"

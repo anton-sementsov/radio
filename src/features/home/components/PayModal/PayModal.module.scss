@@ -1,3 +1,5 @@
+@import '../../../../styles/breakpoints';
+
 .overlay {
     font-family: 'ScaniaSans';
     position: fixed;
@@ -23,11 +25,19 @@
 .modal {
     opacity: 1 !important;
     padding: 20px 20px 40px 20px;
-    opacity: 1;
-    max-width: 500px;
-    min-width: 600px;
-    min-height: 250px;
-    max-height: 600px;
+
+    @include md {
+        max-width: 500px;
+        min-width: 600px;
+        min-height: 250px;
+        max-height: 800px; 
+    }
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 400px;
+    max-height: none;
+
+
     background-color: white;
     position: relative;
 
@@ -50,8 +60,23 @@
     text-align: center;
     cursor: pointer;
     color: white;
-    display: inline-block;
+    display: block;
     background-color: black;
     text-decoration: none !important;
+    margin: 15px 0px;
+    @include md {
+        margin: 0px 0px;
+    }
 }
 
+.button {
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    @include md {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around !important;
+    }
+}
