@@ -33,6 +33,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "postcss": "^8.4.5",
     "prettier": "2.5.1",
+    "react-modal": "^3.14.4",
     "react-share": "^4.4.0"
   },
   "config": {

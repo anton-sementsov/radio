@@ -6,14 +6,18 @@ import { Button } from '../components/Button';
 import logo from '../assets/images/logo.png';
 import fbIcon from '../assets/images/facebook_blue.png';
 import twitterIcon from '../assets/images/twietter_blue.png';
-import shareIcon from '../assets/images/Share_blue.png';
 import { ProgressBar } from '../features/home/components/ProgressBar';
 import { CommentStripe } from '../features/home/components/CommentStripe';
+import { PayModal } from '../features/home/components/PayModal';
 import { FacebookShareButton, TwitterShareButton, TwitterIcon } from "react-share";
 import styles from '../styles/Home.module.scss'
 import { SEO } from '../utils/seo';
+import { useState } from 'react';
+import Modal from 'react-modal';
 
 export default function Home() {
+
+  const [payModal, setPayModal] = useState(false);
 
   const seo = {
     title: 'Grains of Peace on 20ft Radio',
@@ -63,7 +67,7 @@ export default function Home() {
               <ProgressBar />
             </div>
             <div style={{ marginTop: '20px' }}>
-              <Button label='DONATE' onClick={() => { window.open('https://www.paypal.com/donate/?hosted_button_id=FARF8CJJPJMQS', '_blank').focus(); }} />
+              <Button label='DONATE' onClick={() => setPayModal(true)} />
             </div>
             <p style={{ marginTop: '15px', fontFamily: 'ScaniaSansBold' }}>
               SHARE:
@@ -117,6 +121,7 @@ export default function Home() {
           <CommentStripe />
         </div>
       </div>
+      <PayModal payModal={payModal} setPayModal={setPayModal} />
     </div>
   )
 }
