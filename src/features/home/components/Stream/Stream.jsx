@@ -3,6 +3,7 @@ import { airtableDB } from '../../../../lib/api';
 import { OnAir } from './components/OnAir/OnAir';
 import { Next } from './components/Next/Next';
 import { Description } from './components/Description';
+import styles from './Steam.module.scss'
 
 export const Stream = ({ }) => {
 
@@ -34,7 +35,7 @@ export const Stream = ({ }) => {
     }
 
     return (
-        <>
+        <div className={styles.timeline}>
             <div style={{ color: 'transparent', fontSize: '0px' }}>
 
                 <div id={CURENT_ARTIST_ID}></div>
@@ -49,7 +50,6 @@ export const Stream = ({ }) => {
                 <br />
                 PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
             </p>
-        </>
-
+        </div>
     );
 };
