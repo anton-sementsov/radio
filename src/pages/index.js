@@ -116,10 +116,10 @@ export default function Home() {
             </p>*/}
 
           </div>
-          <div className={styles.timeline}>
+          {/*<div className={styles.timeline}>*/}
             {/*<Timeline />*/}
             <Stream />
-          </div>
+          {/*</div>*/}
         </div>
         <div className={styles.stripe}>
           <CommentStripe />

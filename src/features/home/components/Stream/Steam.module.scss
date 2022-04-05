@@ -1,0 +1,14 @@
+@import '../../../../styles/breakpoints';
+
+.timeline {
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 70px 30px 40px 30px;
+    width: 100%;
+    @include md {
+        width: 50%;
+        padding: 70px 0 0 40px;
+    }
+}
