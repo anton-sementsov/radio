@@ -36,20 +36,21 @@ export const Stream = ({ }) => {
 
     return (
         <div className={styles.timeline}>
-            <div style={{ color: 'transparent', fontSize: '0px' }}>
+            <div className={styles.container}>
+                <div style={{ color: 'transparent', fontSize: '0px' }}>
+                    <div id={CURENT_ARTIST_ID}></div>
+                    <div><span id={NEXT_ARTIST_ID}>...</span></div>
+                </div>
+                <OnAir artist={data?.artist} />
+                <Next next={data?.next} />
+                <Description data={data} />
 
-                <div id={CURENT_ARTIST_ID}></div>
-                <div><span id={NEXT_ARTIST_ID}>...</span></div>
+                <p style={{ marginTop: '130px', minWidth:'400px', color: '#ffffff', textAlign: 'center' }}>
+                    WANT TO PARTICIPATE? SEND YOUR
+                    <br />
+                    PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
+                </p>
             </div>
-            <OnAir artist={data?.artist} />
-            <Next next={data?.next} />
-            <Description data={data} />
-
-            <p style={{ marginTop: '200px', color: '#ffffff', textAlign: 'center' }}>
-                WANT TO PARTICIPATE? SEND YOUR
-                <br />
-                PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
-            </p>
         </div>
     );
 };

@@ -12,3 +12,11 @@
         padding: 70px 0 0 40px;
     }
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
