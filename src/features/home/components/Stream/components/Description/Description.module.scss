@@ -1,0 +1,22 @@
+.container {
+    margin-top: 15px;
+
+    div {
+        position: relative;
+    }
+ 
+    span {
+        font-family: 'ScaniaSansBold';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        color: rgb(12, 128, 196);
+        font-weight: 500;
+    }
+}
+
+.image {
+    width: 320px;
+    height: 320px;
+}

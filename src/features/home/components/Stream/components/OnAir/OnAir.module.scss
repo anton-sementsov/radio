@@ -1,0 +1,26 @@
+.item {
+    border: 1px solid white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 25px;
+    margin: 3px 0 3px 2px;
+    font-weight: 500;
+    width: fit-content;
+    margin-right: 15px;
+    min-width: 105px;
+
+    span {
+        padding-left: 7px;
+    }
+}
+
+.container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist {
+    font-size: 24px;
+}

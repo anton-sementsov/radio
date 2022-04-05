@@ -1,5 +1,6 @@
 
 import { Timeline } from '../features/home/components/Timeline';
+import { Stream } from '../features/home/components/Stream';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Button } from '../components/Button';
@@ -9,6 +10,7 @@ import twitterIcon from '../assets/images/twietter_blue.png';
 import { ProgressBar } from '../features/home/components/ProgressBar';
 import { CommentStripe } from '../features/home/components/CommentStripe';
 import { PayModal } from '../features/home/components/PayModal';
+import { CurrentDescription } from '../features/home/components/CurentDesciption';
 import { FacebookShareButton, TwitterShareButton, TwitterIcon } from "react-share";
 import styles from '../styles/Home.module.scss'
 import { SEO } from '../utils/seo';
@@ -31,10 +33,12 @@ export default function Home() {
       <Head>
         <title>Grains of peace</title>
         <SEO seo={seo} />
+        <script src='https://c18.radioboss.fm/w/nowplaying.js?u=146&amp;wid=15216&amp;nl=1'></script>
       </Head>
 
       <div className={styles.wrapper}>
         <div className={styles.container}>
+          {/*<CurrentDescription />*/}
           <div className={styles.info}>
             <div className={styles.logo}>
               <Image src={logo.src} alt='logo' layout='intrinsic' width="420px" height="300px" />
@@ -104,17 +108,16 @@ export default function Home() {
               </FacebookShareButton>*/}
             </div>
 
-
-            <p style={{ marginTop: '15px' }}>
+            {/*<p style={{ marginTop: '15px' }}>
               WANT TO PARTICIPATE? SEND YOUR
               <br />
               PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
-            </p>
-
+            </p>*/}
 
           </div>
           <div className={styles.timeline}>
-            <Timeline />
+            {/*<Timeline />*/}
+            <Stream />
           </div>
         </div>
         <div className={styles.stripe}>

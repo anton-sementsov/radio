@@ -1,0 +1,59 @@
+import React, { useState, useEffect } from 'react';
+import { airtableDB } from '../../../../lib/api';
+import { OnAir } from './components/OnAir/OnAir';
+import { Next } from './components/Next/Next';
+import { Description } from './components/Description';
+
+export const Stream = ({ }) => {
+
+    const CURENT_ARTIST_ID = 'rbcloud_nowplaying15216'
+    const NEXT_ARTIST_ID = 'rbcloud_nexttrack15216'
+
+    const [data, setData] = useState({ artist: '', next: '' });
+    console.log('data - ', data.next);
+    useEffect(() => {
+        setTimeout(udpateData, 1000);
+    }, []);
+
+    const udpateData = () => {
+        const artist = document.getElementById(CURENT_ARTIST_ID).innerHTML;
+        const nextArtist = document.getElementById(NEXT_ARTIST_ID).innerHTML;
+
+        airtableDB("mixesStream")
+            .select()
+            .eachPage((records, fetchNextPage) => {
+                const mix = records.filter((record) => {
+                    console.log('record?.fields?.artist?.toUpperCase()', record?.fields?.artist?.toUpperCase());
+                    console.log('artist?.toUpperCase()', artist?.toUpperCase())
+                    return record?.fields?.artist?.toUpperCase() == artist?.toUpperCase()
+                });
+                console.log('fetch table');
+                setData({
+                    ...data,
+                    ...mix[0]?.fields,
+                    img: mix[0]?.fields?.img[0].url,
+                    next: nextArtist
+                });
+            })
+    }
+
+    return (
+        <>
+            <div style={{ color: 'transparent', fontSize: '0px' }}>
+
+                <div id={CURENT_ARTIST_ID}></div>
+                <div><span id={NEXT_ARTIST_ID}>...</span></div>
+            </div>
+            <OnAir artist={data?.artist} />
+            <Next next={data?.next} />
+            <Description data={data} />
+
+            <p style={{ marginTop: '200px', color: '#ffffff', textAlign: 'center' }}>
+                WANT TO PARTICIPATE? SEND YOUR
+                <br />
+                PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
+            </p>
+        </>
+
+    );
+};
