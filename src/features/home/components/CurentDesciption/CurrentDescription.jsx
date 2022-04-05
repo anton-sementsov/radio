@@ -6,7 +6,6 @@ export const CurrentDescription = ({ }) => {
 
     useEffect(() => {
         const myDiv = document.getElementById('rbcloud_nowplaying6327').innerHTML;
-        console.log('myDiv', myDiv);
     }, []);
 
     return (

@@ -9,8 +9,7 @@ export const Stream = ({ }) => {
     const CURENT_ARTIST_ID = 'rbcloud_nowplaying15216'
     const NEXT_ARTIST_ID = 'rbcloud_nexttrack15216'
 
-    const [data, setData] = useState({ artist: '', next: '' });
-    console.log('data - ', data.next);
+    const [data, setData] = useState({ artist: '', next: '' });;
     useEffect(() => {
         setTimeout(udpateData, 1000);
     }, []);
@@ -23,11 +22,8 @@ export const Stream = ({ }) => {
             .select()
             .eachPage((records, fetchNextPage) => {
                 const mix = records.filter((record) => {
-                    console.log('record?.fields?.artist?.toUpperCase()', record?.fields?.artist?.toUpperCase());
-                    console.log('artist?.toUpperCase()', artist?.toUpperCase())
                     return record?.fields?.artist?.toUpperCase() == artist?.toUpperCase()
                 });
-                console.log('fetch table');
                 setData({
                     ...data,
                     ...mix[0]?.fields,

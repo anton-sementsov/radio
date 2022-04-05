@@ -33,6 +33,7 @@ export default function Home() {
       <Head>
         <title>Grains of peace</title>
         <SEO seo={seo} />
+         {/*eslint-disable-next-line @next/next/no-sync-scripts*/}
         <script src='https://c18.radioboss.fm/w/nowplaying.js?u=146&amp;wid=15216&amp;nl=1'></script>
       </Head>
 
