@@ -29,7 +29,8 @@ export const Stream = ({ }) => {
                     ...data,
                     ...mix[0]?.fields,
                     img: mix[0]?.fields?.img[0].url,
-                    next: nextArtist
+                    next: nextArtist,
+                    artist: artist
                 });
             })
     }
