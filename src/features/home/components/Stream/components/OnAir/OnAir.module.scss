@@ -24,3 +24,26 @@
 .artist {
     font-size: 24px;
 }
+
+.blink {
+    color:#bb2424;
+    font-size: 14px;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 3s;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -webkit-animation-duration: 3s;
+  }
+   
+  @keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+  }
+   
+  @-webkit-keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+  }

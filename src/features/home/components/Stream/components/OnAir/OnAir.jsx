@@ -6,7 +6,7 @@ export const OnAir = ({ artist }) => {
     return (
         <div className={styles.container}>
             <div className={styles.item}>
-                <strong>•</strong> <span>ON AIR</span>
+                <strong className={styles.blink}>•</strong> <span>ON AIR</span>
             </div>
             <div className={styles.artist}>{artist.toUpperCase()}</div>
         </div>
