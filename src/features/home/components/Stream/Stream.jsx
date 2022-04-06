@@ -13,6 +13,7 @@ export const Stream = ({ }) => {
     const [data, setData] = useState({ artist: '', next: '' });;
     useEffect(() => {
         setTimeout(udpateData, 1000);
+        setInterval(udpateData, 60000);
     }, []);
 
     const udpateData = () => {
