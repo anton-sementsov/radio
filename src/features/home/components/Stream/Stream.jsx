@@ -47,7 +47,7 @@ export const Stream = ({ }) => {
                 <Next next={data?.next} />
                 <Description data={data} />
 
-                <p style={{ marginTop: '85px', minWidth:'400px', color: '#ffffff', textAlign: 'center' }}>
+                <p style={{ marginTop: '50px', minWidth:'400px', color: '#ffffff', textAlign: 'center' }}>
                     WANT TO PARTICIPATE? SEND YOUR
                     <br />
                     PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
