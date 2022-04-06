@@ -1,6 +1,14 @@
+@import '../../../../../../styles/breakpoints';
+
 .container {
     display: flex;
     color: white;
     font-size: 14px;
     margin-top: 15px;
+    padding: 0 30px;
+
+    @include md {
+        padding: 0;
+    }
+    
 }

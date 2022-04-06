@@ -1,6 +1,13 @@
+@import '../../../../../../styles/breakpoints';
+
 .container {
     margin-top: 15px;
     text-align: left;
+    margin: 15px 30px 0 50px;
+
+    @include md {
+        margin: 15px 0 0 0;
+    }
 
     div {
         position: relative;
@@ -18,6 +25,10 @@
 }
 
 .image {
-    width: 390px;
-    height: 390px;
+    @include md {
+        width: 390px;
+        height: 390px;     
+    }
+    width: 300px;
+    height: 300px;
 }

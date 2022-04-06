@@ -7,7 +7,7 @@ export const Description = ({ data }) => {
     return (
         <div className={styles.container} >
             <div>
-                <img width="390" height="390" layout='fixed' src={img || blankDescription.src} />
+                <img className={styles.image} src={img || blankDescription.src} />
                 <span>{description?.toUpperCase()}</span>
             </div>
         </div>
