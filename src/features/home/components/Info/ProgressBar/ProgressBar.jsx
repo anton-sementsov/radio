@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'rc-progress';
-import { airtableDB } from '../../../../lib/api';
+import { airtableDB } from '../../../../../lib/api';
 import styles from './ProgressBar.module.scss';
 
 

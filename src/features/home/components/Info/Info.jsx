@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../../../../components/Button';
-import { ProgressBar } from '../ProgressBar';
+import { ProgressBar } from './ProgressBar';
 import fbIcon from '../../../../assets/images/facebook_blue.png';
 import instaIcon from '../../../../assets/images/insta.png';
 import telegramIcon from '../../../../assets/images/telegram.png';
@@ -9,7 +9,7 @@ import logo from '../../../../assets/images/logo.png';
 import { PayModal } from '../../components/PayModal';
 import styles from './Info.module.scss';
 
-export const Info = ({ seo }) => {
+export const Info = ({ }) => {
 
     const [payModal, setPayModal] = useState(false);
 
@@ -62,15 +62,6 @@ export const Info = ({ seo }) => {
                 <a href="https://t.me/twentyfeet" target="_blank" style={{ padding: '0 7px', }} rel="noreferrer">
                     <Image src={telegramIcon.src} alt='' width='20' height='20' />
                 </a>
-                {/*<FacebookShareButton
-            url={seo.url}
-            quote={seo.title}
-            description={seo.description}
-            className="Demo__some-network__share-button"
-          >
-            <Image src={shareIcon.src} alt='' width='20' height='20' />
-
-          </FacebookShareButton>*/}
             </div>
             <PayModal payModal={payModal} setPayModal={setPayModal} />
         </div>

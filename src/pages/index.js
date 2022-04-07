@@ -1,28 +1,16 @@
-// eslint-disable-next-line no-restricted-imports
 import Head from 'next/head';
 import { useState } from 'react';
-
-import { CommentStripe } from '../features/home/components/CommentStripe';
-import { Info } from '../features/home/components/Info';
-import { Stream } from '../features/home/components/Stream';
-import { Timeline } from '../features/home/components/Timeline';
-import {
-  CURENT_ARTIST_ID,
-  NEXT_ARTIST_ID,
-  TABS,
-} from '../features/home/components/constans';
-import styles from '../styles/Home.module.scss';
-import { SEO } from '../utils/seo';
+import { CommentStripe } from '@radio//features/home/components/CommentStripe';
+import { Info } from '@radio//features/home/components/Info';
+import { Stream } from '@radio//features/home/components/Stream';
+import { RadioBossWidget } from '@radio//features/home/components/RadioBossWidget'
+import { Timeline } from '@radio//features/home/components/Timeline';
+import { TABS, seo } from '@radio//features/home/components/constans';
+import styles from '@radio/styles/Home.module.scss';
+import { SEO } from '@radio/utils/seo';
 
 export default function Home() {
   const [tab, setTab] = useState(TABS.player);
-  const seo = {
-    title: 'Grains of Peace on 20ft Radio',
-    content:
-      'We believe that music is an instrument of peace, a medicine, which power can be felt by everyone and can help to find faith, hope and peace in this world again.',
-    image: '../assets/images/social2.jpeg',
-    url: 'https://www.20ftradio.net/grains-of-peace',
-  };
 
   const tabList = {
     [TABS.schedule]: <Timeline setTab={setTab} />,
@@ -49,12 +37,7 @@ export default function Home() {
           <CommentStripe />
         </div>
       </div>
-      <div style={{ color: 'transparent', fontSize: '0px' }}>
-        <div id={CURENT_ARTIST_ID}></div>
-        <div>
-          <span id={NEXT_ARTIST_ID}>...</span>
-        </div>
-      </div>
+      <RadioBossWidget />
     </div>
   );
 }

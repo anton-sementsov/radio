@@ -11,8 +11,6 @@ const settings = {
     },
 };
 
-
-
 const socialTags = ({
     openGraphType = 'website',
     url,

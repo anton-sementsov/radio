@@ -15,9 +15,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "pretty": true
+    "pretty": true,
+    "baseUrl": ".",
+    "paths": {
+      "@radio/*": ["./src/*"],
+    }
   },
-  //"include": ["**/*.js", "**/*.jsx"],
+  "include": ["**/*.js", "**/*.jsx"],
   "exclude": ["node_modules"],
-  "extends": "./jsconfig.paths.json"
 }
