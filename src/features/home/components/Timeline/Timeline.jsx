@@ -33,22 +33,16 @@ export const Timeline = ({ setTab }) => {
 
   return (
     <div className={styles.timeline}>
-      <div 
-      style={{
-            border: '1px solid white',
-            padding: '7px 20px',
-            borderRadius: '30px',
-            fontSize: '12px'
-          }}
-      onClick={() => setTab(TABS.player)}>PLAYER</div>
+      <div className={styles.switchButton}
+        onClick={() => setTab(TABS.player)}>SCHEDULE</div>
       <MixList
         items={mixes}
         description={description}
         setDescription={setDescription}
       />
-      
+
       <ArtistDesription mix={description} />
-      
+
     </div>
   );
 };

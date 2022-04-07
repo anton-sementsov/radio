@@ -40,16 +40,13 @@ export const Stream = ({ setTab }) => {
         <OnAir artist={data?.artist} />
         <Next next={data?.next} />
         <div
-            style={{
-            border: '1px solid white',
-            padding: '7px 20px',
-            borderRadius: '30px',
-            fontSize: '12px'
-          }}
+          className={styles.switchButton}
           onClick={() => setTab(TABS.schedule)}
         >
           SCHEDULE
         </div>
+        <Description data={data} />
+
         <p
           style={{
             marginTop: '50px',
@@ -58,8 +55,6 @@ export const Stream = ({ setTab }) => {
             textAlign: 'center',
           }}
         >
-        <Description data={data} />
-        
           WANT TO PARTICIPATE? SEND YOUR
           <br />
           PEACEFUL MiX TO{' '}

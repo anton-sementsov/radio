@@ -4,8 +4,6 @@ import { useState } from 'react';
 
 import { CommentStripe } from '../features/home/components/CommentStripe';
 import { Info } from '../features/home/components/Info';
-import { ModeSelect } from '../features/home/components/ModeSelect/ModeSelect';
-import { PayModal } from '../features/home/components/PayModal';
 import { Stream } from '../features/home/components/Stream';
 import { Timeline } from '../features/home/components/Timeline';
 import {
@@ -17,9 +15,7 @@ import styles from '../styles/Home.module.scss';
 import { SEO } from '../utils/seo';
 
 export default function Home() {
-  const [payModal, setPayModal] = useState(false);
   const [tab, setTab] = useState(TABS.schedule);
-  console.log('tab state', tab);
   const seo = {
     title: 'Grains of Peace on 20ft Radio',
     content:
@@ -46,14 +42,13 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.info}>
             <Info seo={seo} />
-            {tabList[tab]}
           </div>
+          {tabList[tab]}
         </div>
         <div className={styles.stripe}>
           <CommentStripe />
         </div>
       </div>
-      <PayModal payModal={payModal} setPayModal={setPayModal} />
       <div style={{ color: 'transparent', fontSize: '0px' }}>
         <div id={CURENT_ARTIST_ID}></div>
         <div>
