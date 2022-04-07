@@ -15,7 +15,7 @@ import styles from '../styles/Home.module.scss';
 import { SEO } from '../utils/seo';
 
 export default function Home() {
-  const [tab, setTab] = useState(TABS.schedule);
+  const [tab, setTab] = useState(TABS.player);
   const seo = {
     title: 'Grains of Peace on 20ft Radio',
     content:

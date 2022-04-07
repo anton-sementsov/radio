@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../../../../components/Button';
-import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { ProgressBar } from '../ProgressBar';
 import fbIcon from '../../../../assets/images/facebook_blue.png';
-import twitterIcon from '../../../../assets/images/twietter_blue.png';
+import instaIcon from '../../../../assets/images/insta.png';
+import telegramIcon from '../../../../assets/images/telegram.png';
 import logo from '../../../../assets/images/logo.png';
 import { PayModal } from '../../components/PayModal';
 import styles from './Info.module.scss';
@@ -53,25 +53,15 @@ export const Info = ({ seo }) => {
             </p>
 
             <div style={{ paddingTop: '10px' }}>
-
-                <FacebookShareButton
-                    url={seo.url}
-                    quote={seo.title}
-                    description={seo.description}
-                    className="Demo__some-network__share-button"
-                >
+                <a href="https://www.facebook.com/20ftradio/" target="_blank" style={{ padding: '0 7px', }} rel="noreferrer">
                     <Image src={fbIcon.src} alt='' width='20' height='20' />
-                </FacebookShareButton>
-
-                <span style={{ padding: '0 7px' }}>
-                    <TwitterShareButton
-                        title={seo.title}
-                        url={seo.url}
-                    >
-                        <Image src={twitterIcon.src} alt='' width='20' height='20' />
-
-                    </TwitterShareButton>
-                </span>
+                </a>
+                <a href="https://www.instagram.com/20ftradio/" target="_blank" style={{ padding: '0 7px', }} rel="noreferrer">
+                    <Image src={instaIcon.src} alt='' width='20' height='20' />
+                </a>
+                <a href="https://t.me/twentyfeet" target="_blank" style={{ padding: '0 7px', }} rel="noreferrer">
+                    <Image src={telegramIcon.src} alt='' width='20' height='20' />
+                </a>
                 {/*<FacebookShareButton
             url={seo.url}
             quote={seo.title}
