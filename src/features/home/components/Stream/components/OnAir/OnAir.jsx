@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArtistDesriptionMobile } from '../../../ArtistDesriptionMobile';
 import styles from './OnAir.module.scss';
 
 export const OnAir = ({ artist }) => {

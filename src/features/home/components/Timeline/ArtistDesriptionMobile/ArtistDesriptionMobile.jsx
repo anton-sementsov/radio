@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './ArtistDesriptionMobile.module.scss'
 
 export const ArtistDesriptionMobile = ({ mix, setOpen, setDescription }) => {

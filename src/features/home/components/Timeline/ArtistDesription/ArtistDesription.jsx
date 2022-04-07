@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './ArtistDesription.module.scss'
 
 export const ArtistDesription = ({ mix, mobile = false }) => {

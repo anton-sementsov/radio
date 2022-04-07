@@ -1,7 +1,7 @@
 import { airtableDB } from '../../../../lib/api';
 import React, { useEffect, useState } from 'react';
-import { MixList } from '../MixList';
-import { ArtistDesription } from '../ArtistDesription';
+import { MixList } from './MixList';
+import { ArtistDesription } from './ArtistDesription';
 import styles from './Timeline.module.scss';
 
 export const Timeline = () => {

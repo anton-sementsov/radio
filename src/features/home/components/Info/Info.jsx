@@ -10,7 +10,7 @@ import styles from './Info.module.scss';
 
 export const Info = ({ seo }) => {
     return (
-        <div className={styles.Info}>
+        <div className={styles.container}>
             <div className={styles.logo}>
                 <Image src={logo.src} alt='logo' layout='intrinsic' width="420px" height="300px" />
             </div>
