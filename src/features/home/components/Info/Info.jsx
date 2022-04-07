@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../../../../components/Button';
 import { FacebookShareButton, TwitterShareButton } from "react-share";
@@ -6,9 +6,13 @@ import { ProgressBar } from '../ProgressBar';
 import fbIcon from '../../../../assets/images/facebook_blue.png';
 import twitterIcon from '../../../../assets/images/twietter_blue.png';
 import logo from '../../../../assets/images/logo.png';
+import { PayModal } from '../../components/PayModal';
 import styles from './Info.module.scss';
 
 export const Info = ({ seo }) => {
+
+    const [payModal, setPayModal] = useState(false);
+
     return (
         <div className={styles.container}>
             <div className={styles.logo}>
@@ -78,15 +82,7 @@ export const Info = ({ seo }) => {
 
           </FacebookShareButton>*/}
             </div>
-
-
-            <p style={{ marginTop: '15px' }}>
-                WANT TO PARTICIPATE? SEND YOUR
-                <br />
-                PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
-            </p>
-
-
+            <PayModal payModal={payModal} setPayModal={setPayModal} />
         </div>
     );
 };
