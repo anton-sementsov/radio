@@ -1,58 +1,73 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import { airtableDB } from '../../../../lib/api';
-import { OnAir } from './components/OnAir/OnAir';
-import { Next } from './components/Next/Next';
+import { CURENT_ARTIST_ID, NEXT_ARTIST_ID, TABS } from '../constans';
+import styles from './Steam.module.scss';
 import { Description } from './components/Description';
-import styles from './Steam.module.scss'
+import { Next } from './components/Next/Next';
+import { OnAir } from './components/OnAir/OnAir';
 
-export const Stream = ({ }) => {
+export const Stream = ({ setTab }) => {
+  const [data, setData] = useState({ artist: '', next: '' });
+  useEffect(() => {
+    setTimeout(udpateData, 1000);
+    setInterval(udpateData, 60000);
+  }, []);
 
-    const CURENT_ARTIST_ID = 'rbcloud_nowplaying15216'
-    const NEXT_ARTIST_ID = 'rbcloud_nexttrack15216'
+  const udpateData = () => {
+    const artist = document.getElementById(CURENT_ARTIST_ID)?.innerHTML;
+    const nextArtist = document.getElementById(NEXT_ARTIST_ID)?.innerHTML;
 
-    const [data, setData] = useState({ artist: '', next: '' });;
-    useEffect(() => {
-        setTimeout(udpateData, 1000);
-        setInterval(udpateData, 60000);
-    }, []);
+    airtableDB('mixesStream')
+      .select()
+      .eachPage((records, fetchNextPage) => {
+        const mix = records.filter((record) => {
+          return record?.fields?.artist?.toUpperCase() == artist?.toUpperCase();
+        });
+        setData({
+          ...data,
+          ...mix[0]?.fields,
+          img: mix[0]?.fields?.img[0].url,
+          next: nextArtist,
+          artist: artist,
+        });
+      });
+  };
 
-    const udpateData = () => {
-        const artist = document.getElementById(CURENT_ARTIST_ID).innerHTML;
-        const nextArtist = document.getElementById(NEXT_ARTIST_ID).innerHTML;
-
-        airtableDB("mixesStream")
-            .select()
-            .eachPage((records, fetchNextPage) => {
-                const mix = records.filter((record) => {
-                    return record?.fields?.artist?.toUpperCase() == artist?.toUpperCase()
-                });
-                setData({
-                    ...data,
-                    ...mix[0]?.fields,
-                    img: mix[0]?.fields?.img[0].url,
-                    next: nextArtist,
-                    artist: artist
-                });
-            })
-    }
-
-    return (
-        <div className={styles.timeline}>
-            <div className={styles.container}>
-                <div style={{ color: 'transparent', fontSize: '0px' }}>
-                    <div id={CURENT_ARTIST_ID}></div>
-                    <div><span id={NEXT_ARTIST_ID}>...</span></div>
-                </div>
-                <OnAir artist={data?.artist} />
-                <Next next={data?.next} />
-                <Description data={data} />
-
-                <p style={{ marginTop: '50px', minWidth:'400px', color: '#ffffff', textAlign: 'center' }}>
-                    WANT TO PARTICIPATE? SEND YOUR
-                    <br />
-                    PEACEFUL MiX TO  <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">20FTRADIO@GMAIL.COM</a>
-                </p>
-            </div>
+  return (
+    <div className={styles.timeline}>
+      <div className={styles.container}>
+        <OnAir artist={data?.artist} />
+        <Next next={data?.next} />
+        <div
+            style={{
+            border: '1px solid white',
+            padding: '7px 20px',
+            borderRadius: '30px',
+            fontSize: '12px'
+          }}
+          onClick={() => setTab(TABS.schedule)}
+        >
+          SCHEDULE
         </div>
-    );
+        <p
+          style={{
+            marginTop: '50px',
+            minWidth: '400px',
+            color: '#ffffff',
+            textAlign: 'center',
+          }}
+        >
+        <Description data={data} />
+        
+          WANT TO PARTICIPATE? SEND YOUR
+          <br />
+          PEACEFUL MiX TO{' '}
+          <a style={{ color: '#FECE4D' }} href="mailto:20ftradio@gmail.com">
+            20FTRADIO@GMAIL.COM
+          </a>
+        </p>
+      </div>
+    </div>
+  );
 };
