@@ -49,7 +49,7 @@ export const Info = ({ }) => {
                 <Button label='DONATE' onClick={() => setPayModal(true)} />
             </div>
             <p style={{ marginTop: '15px', fontFamily: 'ScaniaSansBold' }}>
-                SHARE:
+            SsUBSCRIBE:
             </p>
 
             <div style={{ paddingTop: '10px' }}>
