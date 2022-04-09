@@ -1,38 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { airtableDB } from '../../../../lib/api';
-import styles from './CommentStripe.module.scss'
+import React, { useEffect, useState } from 'react';
 
-export const CommentStripe = ({ }) => {
+import { airtableDB } from '@radio/lib/api';
 
+import styles from './CommentStripe.module.scss';
 
-    const [messages, setMessages] = useState([]);
+export const CommentStripe = ({}) => {
+  const [messages, setMessages] = useState([]);
 
-    useEffect(() => {
-        airtableDB("messages")
-            .select()
-            .eachPage((records, fetchNextPage) => {
-                const result = records
-                    .map(({ fields }) => ({
-                        text: fields?.text,
-                        emoji: fields?.emoji
-                    }))
-                setMessages(result);
-                fetchNextPage();
-            });
-    }, []);
+  useEffect(() => {
+    airtableDB('messages')
+      .select()
+      .eachPage((records, fetchNextPage) => {
+        const result = records.map(({ fields }) => ({
+          text: fields?.text,
+          emoji: fields?.emoji,
+        }));
+        setMessages(result);
+        fetchNextPage();
+      });
+  }, []);
 
-    if (!messages) return <></>;
+  if (!messages) return <></>;
 
-    return (
-        <div className={styles.marquee} >
-            <span>
-                 {/*eslint-disable-next-line react/jsx-key*/}
-                {messages.map((message) => <div className={styles.stripeContainer}>
-                    <div className={styles.emoji}>{message?.emoji}</div>
-                    <div className={styles.text}>{message?.text?.toUpperCase()}</div>
-                    <div className={styles.textInvis}>{message?.text?.toUpperCase()}</div>
-                </div>)}
-            </span>
-        </div>
-    );
+  return (
+    <div className={styles.marquee}>
+      <span>
+        {messages.map((message, index) => (
+          <div key={index} className={styles.stripeContainer}>
+            <div className={styles.emoji}>{message?.emoji}</div>
+            <div className={styles.text}>{message?.text?.toUpperCase()}</div>
+            <div className={styles.textInvis}>
+              {message?.text?.toUpperCase()}
+            </div>
+          </div>
+        ))}
+      </span>
+    </div>
+  );
 };

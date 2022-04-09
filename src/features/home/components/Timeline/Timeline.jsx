@@ -33,8 +33,9 @@ export const Timeline = ({ setTab }) => {
 
   return (
     <div className={styles.timeline}>
-      <div className={styles.switchButton}
-        onClick={() => setTab(TABS.player)}>SCHEDULE</div>
+      <div className={styles.switchButton} onClick={() => setTab(TABS.player)}>
+        SCHEDULE
+      </div>
       <MixList
         items={mixes}
         description={description}
@@ -42,7 +43,6 @@ export const Timeline = ({ setTab }) => {
       />
 
       <ArtistDesription mix={description} />
-
     </div>
   );
 };

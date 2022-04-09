@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import { Line } from 'rc-progress';
+import React, { useEffect, useState } from 'react';
+
 import { airtableDB } from '../../../../../lib/api';
 import styles from './ProgressBar.module.scss';
 
-
-export const ProgressBar = ({ }) => {
-
+export const ProgressBar = ({}) => {
   const [donates, setDonates] = useState({});
 
   useEffect(() => {
-    airtableDB("donate")
+    airtableDB('donate')
       .select()
       .eachPage((records, fetchNextPage) => {
         setDonates({
@@ -20,12 +19,11 @@ export const ProgressBar = ({ }) => {
       });
   }, []);
 
-
   return (
     <div className={styles.progress}>
       <span>{donates?.collected}</span>
       <Line
-        percent={(donates.collected * 100 / donates.total)}
+        percent={(donates.collected * 100) / donates.total}
         strokeWidth={3}
         trailWidth={3}
         strokeColor="#F6C20B"
