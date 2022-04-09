@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Button } from '../../../../components/Button';
+import { Button } from '@radio/components/Button';
 import { ProgressBar } from './ProgressBar';
-import fbIcon from '../../../../assets/images/facebook_blue.png';
-import instaIcon from '../../../../assets/images/insta.png';
-import telegramIcon from '../../../../assets/images/telegram.png';
-import logo from '../../../../assets/images/logo.png';
-import { PayModal } from '../../components/PayModal';
+import fbIcon from '@radio/assets/icons/facebook_blue.png';
+import instaIcon from '@radio/assets/icons/insta.png';
+import telegramIcon from '@radio/assets/icons/telegram.png';
+import logo from '@radio/assets/icons/logo.png';
+import { PayModal } from '../PayModal';
 import styles from './Info.module.scss';
 
 export const Info = ({ }) => {
@@ -49,7 +49,7 @@ export const Info = ({ }) => {
                 <Button label='DONATE' onClick={() => setPayModal(true)} />
             </div>
             <p style={{ marginTop: '15px', fontFamily: 'ScaniaSansBold' }}>
-            SsUBSCRIBE:
+            SUBSCRIBE:
             </p>
 
             <div style={{ paddingTop: '10px' }}>
@@ -63,6 +63,7 @@ export const Info = ({ }) => {
                     <Image src={telegramIcon.src} alt='' width='20' height='20' />
                 </a>
             </div>
+
             <PayModal payModal={payModal} setPayModal={setPayModal} />
         </div>
     );

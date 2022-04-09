@@ -5,9 +5,10 @@ import { Info } from '@radio//features/home/components/Info';
 import { Stream } from '@radio//features/home/components/Stream';
 import { RadioBossWidget } from '@radio//features/home/components/RadioBossWidget'
 import { Timeline } from '@radio//features/home/components/Timeline';
-import { TABS, seo } from '@radio//features/home/components/constans';
+import { TABS } from '@radio//features/home/components/constans';
 import styles from '@radio/styles/Home.module.scss';
-import { SEO } from '@radio/utils/seo';
+import { SEO, seo } from '@radio/utils/seo'
+
 
 export default function Home() {
   const [tab, setTab] = useState(TABS.player);

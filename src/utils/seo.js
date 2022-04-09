@@ -1,4 +1,4 @@
-const settings = {
+export const settings = {
     meta: {
         rootUrl: "https://www.20ftradio.net/",
         title: "Grains of Peace on 20ft Radio",
