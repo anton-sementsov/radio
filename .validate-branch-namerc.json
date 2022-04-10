@@ -1,0 +1,4 @@
+{
+  "pattern": "^(chore|docs|feat|fix|refactor|release|revert|style)/((RA-\\d+)|([a-z-]+))$",
+  "errorMsg": "Branch name should start with one of `chore|docs|feat|fix|refactor|release|revert|style`, followed by the Jira ticket number or a meaningful description. Example: `feat/RA-1` or `chore/validate-branch-name`"
+}
