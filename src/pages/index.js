@@ -7,6 +7,7 @@ import { RadioBossWidget } from '@radio//features/home/components/RadioBossWidge
 import { Stream } from '@radio//features/home/components/Stream';
 import { Timeline } from '@radio//features/home/components/Timeline';
 import { TABS } from '@radio//features/home/components/constans';
+import { SupportButton } from '@radio/components/SupportButton/SupportButton';
 import styles from '@radio/styles/Home.module.scss';
 import { SEO, seo } from '@radio/utils/seo';
 
@@ -39,6 +40,7 @@ export default function Home() {
         </div>
       </div>
       <RadioBossWidget />
+      <SupportButton />
     </div>
   );
 }

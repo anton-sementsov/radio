@@ -1,0 +1,12 @@
+.button {
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
